@@ -44,3 +44,11 @@ CREATE TABLE persons_wallets (
     wallet_id INT ,
     balance INT NOT NULL
 );
+
+CREATE TABLE categories (
+    category_id INT PRIMARY KEY,
+    name VARCHAR(255),
+    parent INT,
+    created_at DATETIME,
+    created_by INT
+);
