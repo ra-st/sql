@@ -209,3 +209,7 @@ ALTER TABLE wallets_discounts ADD CONSTRAINT wallets_discounts_wallets FOREIGN K
 
 -- End of file.
 
+INSERT INTO TABLE shops (shop_id,rate,address,shop_phone)
+    VALUES ('1','4','قاسم اباد _ادیب','d36'),
+           ('2','5','AHMAD ABAD','03313'),
+           ('3','3','VAKIL ABAD','5454');
