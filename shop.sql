@@ -1,4 +1,3 @@
--- Created by Vertabelo (http://vertabelo.com)
 -- Last modification date: 2022-05-08 10:19:33.892
 
 -- tables
