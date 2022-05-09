@@ -45,10 +45,11 @@ CREATE TABLE persons_wallets (
     balance INT NOT NULL
 );
 
-CREATE TABLE categories (
-    category_id INT PRIMARY KEY,
-    name VARCHAR(255),
-    parent INT,
-    created_at DATETIME,
-    created_by INT
+CREATE TABLE discounts (
+    discount_id INT PRIMARY KEY,
+    amount INT NOT NULL,
+    mode ENUM('percently','non-percently') ,
+    from_max INT,
+    from_min INT,
+    consumed INT NOT NULL
 );
