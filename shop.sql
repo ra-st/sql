@@ -225,3 +225,11 @@ INSERT INTO persons (phone, first_name, last_name, address, email, birth_date, j
            ('+989363713252','Saber','Sabery','Asia/Iran/Rasht','Saber@gmail.com','2002-04-01','2020-10-23 20:59:59'),
            ('+989363235235','Saba','Sabaii','Asia/Iran/Sari','Saba@gmail.com','2000-12-24','2020-10-22 20:59:59'),
            ('+989363745346','Sara','Saboory','Asia/Iran/Urumia','Sara@gmail.com','2004-10-24','2020-10-20 21:09:59');
+
+INSERT INTO employees (employee_phone, salary)
+    VALUES ('+989363236021','10000000'),
+           ('+989362326021','5000000'),
+           ('+989362356021','4500000'),
+           ('+989363356021','25000000'),
+           ('+989363712321','335000');
+
