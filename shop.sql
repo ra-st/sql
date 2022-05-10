@@ -209,7 +209,19 @@ ALTER TABLE wallets_discounts ADD CONSTRAINT wallets_discounts_wallets FOREIGN K
 
 -- End of file.
 
-INSERT INTO TABLE shops (shop_id,rate,address,shop_phone)
+INSERT INTO shops (shop_id,rate,address,shop_phone)
     VALUES ('1','4','قاسم اباد _ادیب','d36'),
            ('2','5','AHMAD ABAD','03313'),
            ('3','3','VAKIL ABAD','5454');
+
+INSERT INTO persons (phone, first_name, last_name, address, email, birth_date, join_at) 
+    VALUES ('+989363716021','Ali','Ahmady','Asia/Iran/Tehran','Ali@gmail.com','2022-01-24','2020-10-20 20:59:59'),
+           ('+989363236021','Abbas','Abbasy','Asia/Iran/Mashahd','Abbas@gmail.com','2003-02-24','2020-10-21 20:59:59'),
+           ('+989362326021','Shahab','Shahaby','Asia/Iran/Isfahan','Shahab@gmail.com','2003-10-04','2020-10-22 20:59:59'),
+           ('+989362356021','Abolfazl','Aboly','Asia/Iran/Zahedan','Abolfazl@gmail.com','2003-12-04','2020-10-23 20:59:59'),
+           ('+989363356021','Sajjad','Sajjadi','Asia/Iran/Birjand','Sajjad@gmail.com','2002-02-25','2020-10-22 22:59:59'),
+           ('+989363712321','Wing','Cheung chow','Asia/China/Hongkong','Wing@gmail.com','2001-04-24','2020-10-21 20:59:59'),
+           ('+989363235251','Kumar','Khalil','Asia/India/Mumbaii','Kumar@gmail.com','2002-03-21','2020-10-22 20:59:59'),
+           ('+989363713252','Saber','Sabery','Asia/Iran/Rasht','Saber@gmail.com','2002-04-01','2020-10-23 20:59:59'),
+           ('+989363235235','Saba','Sabaii','Asia/Iran/Sari','Saba@gmail.com','2000-12-24','2020-10-22 20:59:59'),
+           ('+989363745346','Sara','Saboory','Asia/Iran/Urumia','Sara@gmail.com','2004-10-24','2020-10-20 21:09:59');
