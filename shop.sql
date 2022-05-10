@@ -275,7 +275,7 @@ INSERT INTO categories (category_id, name, parent, created_at, created_by)
            (7,'food',null,now(),'+989363236021');
            
  INSERT INTO factors (factor_id, wallet, mode, title, details, amount, data_time, shop)
-           (1,'25','pay_in','خرید گوشی','fast post','1','22/1/2022','فروشگاه کوروش'),
+    VALUES (1,'25','pay_in','خرید گوشی','fast post','1','22/1/2022','فروشگاه کوروش'),
            (2,'30','pay_in','خرید کیف','Breakable','1','20/1/2022','فروشگاه دی جی کالا'),
            (3,'10','default','lap tap','electrical thing','3','31/1/2021','ebuy'),
            (4,'5','pay_out','tv','sensitive','5','25/3/2022','amazun'),
