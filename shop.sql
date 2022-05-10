@@ -255,4 +255,9 @@ INSERT INTO persons_wallets (person_phone, wallet_id, balance)
            ('+989362356021',4,1245443634),
            ('+989363356021',5,124534524);
 
-
+INSERT INTO jobs (job_id, employee_phone, role, salary, rate)
+    VALUES (1,'+989363236021','shopping',5000000,4),
+           (2,'+989362326021','statistics',10000000,4),
+           (3,'+989362356021','advertising',5000000,5),
+           (4,'+989363356021','ios developer',20000000,4),
+           (5,'+989363712321','android developer',3000000,5);
