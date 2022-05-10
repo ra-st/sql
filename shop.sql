@@ -240,4 +240,10 @@ INSERT INTO customers (customer_phone)
            ('+989363235235'),
            ('+989363745346');
 
-
+INSERT INTO wallets (wallet_id,balance)
+    VALUES (1,12424),
+           (2,124544),
+           (3,124543324),
+           (4,1245443634),
+           (5,124534524);
+    
