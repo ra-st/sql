@@ -1,11 +1,12 @@
--- Last modification date: 2022-05-08 10:19:33.892
+-- Created by Vertabelo (http://vertabelo.com)
+-- Last modification date: 2022-05-10 08:51:48.082
 
 -- tables
 -- Table: carts
 CREATE TABLE carts (
     cart_id int NOT NULL,
     wallet int NOT NULL,
-    create_at datetime NOT NULL DEFAULT now(),
+    create_at datetime NOT NULL DEFAULT NOW(),
     CONSTRAINT `carts_pk` PRIMARY KEY (cart_id)
 );
 
@@ -14,8 +15,8 @@ CREATE TABLE categories (
     category_id int NOT NULL,
     name varchar(255) NOT NULL,
     parent int NULL DEFAULT 0,
-    created_at datetime NOT NULL DEFAULT now(),
-    created_by VARCHAR(50) NOT NULL,
+    created_at datetime NOT NULL DEFAULT NOW(),
+    created_by varchar(50) NOT NULL,
     CONSTRAINT `categories_pk` PRIMARY KEY (category_id)
 );
 
@@ -41,7 +42,7 @@ CREATE TABLE discounts (
 CREATE TABLE employees (
     employee_phone varchar(50) NOT NULL,
     salary int NOT NULL DEFAULT 0,
-    join_at datetime NOT NULL DEFAULT now(),
+    join_at datetime NOT NULL DEFAULT NOW(),
     CONSTRAINT `employees_pk` PRIMARY KEY (employee_phone)
 );
 
@@ -53,7 +54,7 @@ CREATE TABLE factors (
     title text NOT NULL,
     details text NOT NULL,
     amount int NOT NULL,
-    date_time datetime NOT NULL DEFAULT now(),
+    date_time datetime NOT NULL DEFAULT NOW(),
     shop int NOT NULL,
     CONSTRAINT `factors_pk` PRIMARY KEY (factor_id)
 );
@@ -61,7 +62,7 @@ CREATE TABLE factors (
 -- Table: jobs
 CREATE TABLE jobs (
     job_id int NOT NULL,
-    employee_phone varchar(50) NULL,
+    employee varchar(50) NULL,
     role text NOT NULL,
     salary int NOT NULL DEFAULT 0,
     rate enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
@@ -77,16 +78,16 @@ CREATE TABLE persons (
     email text NULL,
     birth_date date NULL,
     wallet int NULL,
-    join_at datetime NULL DEFAULT now(),
+    join_at datetime NULL DEFAULT NOW(),
     CONSTRAINT `persons_pk` PRIMARY KEY (phone)
 );
 
 -- Table: persons_wallets
 CREATE TABLE persons_wallets (
-    person_phone varchar(50) NOT NULL,
-    wallet_id int NOT NULL,
+    person varchar(50) NOT NULL,
+    wallet int NOT NULL,
     balance int NOT NULL,
-    CONSTRAINT persons_wallets_pk PRIMARY KEY (person_phone,wallet_id)
+    CONSTRAINT persons_wallets_pk PRIMARY KEY (person,wallet)
 );
 
 -- Table: products
@@ -95,17 +96,17 @@ CREATE TABLE products (
     name text NOT NULL,
     total_count int NOT NULL DEFAULT 0,
     category int NOT NULL,
-    added_at datetime NOT NULL DEFAULT now(),
-    added_by VARCHAR(50) NOT NULL,
+    added_at datetime NOT NULL DEFAULT NOW(),
+    added_by varchar(50) NOT NULL,
     shop int NOT NULL,
     CONSTRAINT `products_pk` PRIMARY KEY (product_id)
 );
 
 -- Table: products_carts
 CREATE TABLE products_carts (
-    product_id int NOT NULL,
-    cart_id int NOT NULL,
-    CONSTRAINT products_carts_pk PRIMARY KEY (product_id,cart_id)
+    product int NOT NULL,
+    cart int NOT NULL,
+    CONSTRAINT products_carts_pk PRIMARY KEY (product,cart)
 );
 
 -- Table: shops
@@ -119,9 +120,9 @@ CREATE TABLE shops (
 
 -- Table: shops_employees
 CREATE TABLE shops_employees (
-    shop_id int NOT NULL,
-    employee_id int NOT NULL,
-    CONSTRAINT shops_employees_pk PRIMARY KEY (shop_id,employee_id)
+    shop int NOT NULL,
+    employee int NOT NULL,
+    CONSTRAINT shops_employees_pk PRIMARY KEY (shop,employee)
 );
 
 -- Table: wallets
@@ -133,9 +134,9 @@ CREATE TABLE wallets (
 
 -- Table: wallets_discounts
 CREATE TABLE wallets_discounts (
-    wallet_id int NOT NULL,
-    discount_id int NOT NULL,
-    CONSTRAINT wallets_discounts_pk PRIMARY KEY (wallet_id,discount_id)
+    wallet int NOT NULL,
+    discount int NOT NULL,
+    CONSTRAINT wallets_discounts_pk PRIMARY KEY (wallet,discount)
 );
 
 -- foreign keys
@@ -168,19 +169,19 @@ ALTER TABLE employees ADD CONSTRAINT persons_employees FOREIGN KEY persons_emplo
     REFERENCES persons (phone);
 
 -- Reference: persons_wallets_persons (table: persons_wallets)
-ALTER TABLE persons_wallets ADD CONSTRAINT persons_wallets_persons FOREIGN KEY persons_wallets_persons (person_phone)
+ALTER TABLE persons_wallets ADD CONSTRAINT persons_wallets_persons FOREIGN KEY persons_wallets_persons (person)
     REFERENCES persons (phone);
 
 -- Reference: persons_wallets_wallets (table: persons_wallets)
-ALTER TABLE persons_wallets ADD CONSTRAINT persons_wallets_wallets FOREIGN KEY persons_wallets_wallets (wallet_id)
+ALTER TABLE persons_wallets ADD CONSTRAINT persons_wallets_wallets FOREIGN KEY persons_wallets_wallets (wallet)
     REFERENCES wallets (wallet_id);
 
 -- Reference: products_carts_carts (table: products_carts)
-ALTER TABLE products_carts ADD CONSTRAINT products_carts_carts FOREIGN KEY products_carts_carts (cart_id)
+ALTER TABLE products_carts ADD CONSTRAINT products_carts_carts FOREIGN KEY products_carts_carts (cart)
     REFERENCES carts (cart_id);
 
 -- Reference: products_carts_products (table: products_carts)
-ALTER TABLE products_carts ADD CONSTRAINT products_carts_products FOREIGN KEY products_carts_products (product_id)
+ALTER TABLE products_carts ADD CONSTRAINT products_carts_products FOREIGN KEY products_carts_products (product)
     REFERENCES products (product_id);
 
 -- Reference: products_categories (table: products)
@@ -192,22 +193,23 @@ ALTER TABLE products ADD CONSTRAINT products_shops FOREIGN KEY products_shops (s
     REFERENCES shops (shop_phone);
 
 -- Reference: shops_employees_employees (table: shops_employees)
-ALTER TABLE shops_employees ADD CONSTRAINT shops_employees_employees FOREIGN KEY shops_employees_employees (<EMPTY>,employee_id)
+ALTER TABLE shops_employees ADD CONSTRAINT shops_employees_employees FOREIGN KEY shops_employees_employees (<EMPTY>,employee)
     REFERENCES employees (employee_phone,employee_phone);
 
 -- Reference: shops_employees_shops (table: shops_employees)
-ALTER TABLE shops_employees ADD CONSTRAINT shops_employees_shops FOREIGN KEY shops_employees_shops (shop_id)
+ALTER TABLE shops_employees ADD CONSTRAINT shops_employees_shops FOREIGN KEY shops_employees_shops (shop)
     REFERENCES shops (shop_id);
 
 -- Reference: wallets_discounts_discounts (table: wallets_discounts)
-ALTER TABLE wallets_discounts ADD CONSTRAINT wallets_discounts_discounts FOREIGN KEY wallets_discounts_discounts (discount_id)
+ALTER TABLE wallets_discounts ADD CONSTRAINT wallets_discounts_discounts FOREIGN KEY wallets_discounts_discounts (discount)
     REFERENCES discounts (discount_id);
 
 -- Reference: wallets_discounts_wallets (table: wallets_discounts)
-ALTER TABLE wallets_discounts ADD CONSTRAINT wallets_discounts_wallets FOREIGN KEY wallets_discounts_wallets (wallet_id)
+ALTER TABLE wallets_discounts ADD CONSTRAINT wallets_discounts_wallets FOREIGN KEY wallets_discounts_wallets (wallet)
     REFERENCES wallets (wallet_id);
 
 -- End of file.
+
 
 INSERT INTO shops (shop_id,rate,address,shop_phone)
     VALUES ('1','4','قاسم اباد _ادیب','d36'),
@@ -247,7 +249,7 @@ INSERT INTO wallets (wallet_id,balance)
            (4,1245443634),
            (5,124534524);
     
-INSERT INTO persons_wallets (person_phone, wallet_id, balance)
+INSERT INTO persons_wallets (person, wallet, balance)
     VALUES ('+989363712321',1,10424),
            ('+989363235251',1,2000),
            ('+989363713252',2,124544),
@@ -255,7 +257,7 @@ INSERT INTO persons_wallets (person_phone, wallet_id, balance)
            ('+989362356021',4,1245443634),
            ('+989363356021',5,124534524);
 
-INSERT INTO jobs (job_id, employee_phone, role, salary, rate)
+INSERT INTO jobs (job_id, employee, role, salary, rate)
     VALUES (1,'+989363236021','shopping',5000000,4),
            (2,'+989362326021','statistics',10000000,4),
            (3,'+989362356021','advertising',5000000,5),
