@@ -1,5 +1,5 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2022-05-10 08:51:48.082
+-- Last modification date: 2022-05-10 09:13:03.823
 
 -- tables
 -- Table: carts
@@ -121,7 +121,7 @@ CREATE TABLE shops (
 -- Table: shops_employees
 CREATE TABLE shops_employees (
     shop int NOT NULL,
-    employee int NOT NULL,
+    employee varchar(50) NOT NULL,
     CONSTRAINT shops_employees_pk PRIMARY KEY (shop,employee)
 );
 
@@ -153,16 +153,16 @@ ALTER TABLE customers ADD CONSTRAINT customers_persons FOREIGN KEY customers_per
     REFERENCES persons (phone);
 
 -- Reference: factors_shops (table: factors)
-ALTER TABLE factors ADD CONSTRAINT factors_shops FOREIGN KEY factors_shops (<EMPTY>,shop)
-    REFERENCES shops (shop_id,shop_id);
+ALTER TABLE factors ADD CONSTRAINT factors_shops FOREIGN KEY factors_shops (shop)
+    REFERENCES shops (shop_id);
 
 -- Reference: factors_wallets (table: factors)
 ALTER TABLE factors ADD CONSTRAINT factors_wallets FOREIGN KEY factors_wallets (wallet)
     REFERENCES wallets (wallet_id);
 
 -- Reference: jobs_employees (table: jobs)
-ALTER TABLE jobs ADD CONSTRAINT jobs_employees FOREIGN KEY jobs_employees (rate)
-    REFERENCES employees (join_at);
+ALTER TABLE jobs ADD CONSTRAINT jobs_employees FOREIGN KEY jobs_employees (employee)
+    REFERENCES employees (employee_phone);
 
 -- Reference: persons_employees (table: employees)
 ALTER TABLE employees ADD CONSTRAINT persons_employees FOREIGN KEY persons_employees (employee_phone)
@@ -190,11 +190,11 @@ ALTER TABLE products ADD CONSTRAINT products_categories FOREIGN KEY products_cat
 
 -- Reference: products_shops (table: products)
 ALTER TABLE products ADD CONSTRAINT products_shops FOREIGN KEY products_shops (shop)
-    REFERENCES shops (shop_phone);
+    REFERENCES shops (shop_id);
 
 -- Reference: shops_employees_employees (table: shops_employees)
-ALTER TABLE shops_employees ADD CONSTRAINT shops_employees_employees FOREIGN KEY shops_employees_employees (<EMPTY>,employee)
-    REFERENCES employees (employee_phone,employee_phone);
+ALTER TABLE shops_employees ADD CONSTRAINT shops_employees_employees FOREIGN KEY shops_employees_employees (employee)
+    REFERENCES employees (employee_phone);
 
 -- Reference: shops_employees_shops (table: shops_employees)
 ALTER TABLE shops_employees ADD CONSTRAINT shops_employees_shops FOREIGN KEY shops_employees_shops (shop)
@@ -209,6 +209,7 @@ ALTER TABLE wallets_discounts ADD CONSTRAINT wallets_discounts_wallets FOREIGN K
     REFERENCES wallets (wallet_id);
 
 -- End of file.
+
 
 
 INSERT INTO shops (shop_id,rate,address,shop_phone)
