@@ -15,7 +15,7 @@ CREATE TABLE categories (
     name varchar(255) NOT NULL,
     parent int NULL DEFAULT 0,
     created_at datetime NOT NULL DEFAULT now(),
-    created_by int NOT NULL,
+    created_by VARCHAR(50) NOT NULL,
     CONSTRAINT `categories_pk` PRIMARY KEY (category_id)
 );
 
@@ -96,7 +96,7 @@ CREATE TABLE products (
     total_count int NOT NULL DEFAULT 0,
     category int NOT NULL,
     added_at datetime NOT NULL DEFAULT now(),
-    added_by int NOT NULL,
+    added_by VARCHAR(50) NOT NULL,
     shop int NOT NULL,
     CONSTRAINT `products_pk` PRIMARY KEY (product_id)
 );
@@ -261,3 +261,14 @@ INSERT INTO jobs (job_id, employee_phone, role, salary, rate)
            (3,'+989362356021','advertising',5000000,5),
            (4,'+989363356021','ios developer',20000000,4),
            (5,'+989363712321','android developer',3000000,5);
+
+INSERT INTO categories (category_id, name, parent, created_at, created_by)
+    VALUES (1,'sport',null,now(),'+989363236021'),
+           (2,'digital',null,now(),'+989363236021'),
+           (3,'wearing',null,now(),'+989363236021'),
+           (4,'clothe',3,now(),'+989363236021'),
+           (5,'short',3,now(),'+989363236021'),
+           (6,'trouser',3,now(),'+989363236021'),
+           (7,'food',null,now(),'+989363236021');
+
+
