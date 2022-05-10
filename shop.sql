@@ -277,7 +277,7 @@ INSERT INTO categories (category_id, name, parent, created_at, created_by)
  INSERT INTO factors (factor_id, wallet, mode, title, details, amount, data_time, shop)
     VALUES (1,'1','pay_in','خرید گوشی','fast post','1','22/1/2022','1'),
            (2,'3','pay_in','خرید کیف','Breakable','1','20/1/2022','2'),
-           (3,'5','default','lap tap','electrical thing','3','31/1/2021','e3'),
+           (3,'5','default','lap tap','electrical thing','3','31/1/2021','3'),
            (4,'5','pay_out','tv','sensitive','5','25/3/2022','3'),
            (5,'4','pay_out','car','new car','1','18/8/2020','2'),
            (6,'1','pay_in','glasses','sensitive','12','20/3/2021','3'),
