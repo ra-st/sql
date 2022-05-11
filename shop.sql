@@ -304,7 +304,7 @@ INSERT INTO categories (category_id, name, parent, created_at, created_by)
            (6,'trouser',3,now(),'+989363236021'),
            (7,'food',null,now(),'+989363236021');
            
- INSERT INTO factors (factor_id, wallet, mode, title, details, amount, data_time, shop)
+ INSERT INTO factors (factor_id, wallet, mode, title, details, amount, date_time, shop)
     VALUES (1,'1','pay_in','phone','fast post','1','2022-10-20','1'),
            (2,'3','pay_in','bag','Breakable','1','2020-8-6','2'),
            (3,'5','pay_out','lap tap','electrical thing','3','2019-5-8','3'),
