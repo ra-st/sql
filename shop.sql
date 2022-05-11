@@ -304,3 +304,10 @@ INSERT INTO wallets_discounts (wallet, discount)
            ();
            ();
            
+INSERT INTO shops_employees (shop, employee)
+    VALUES ('1','2'),
+           ('2','3'),
+           ('1','1'),
+           ('2','2'),
+           ('3','1');
+           
