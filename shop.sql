@@ -306,7 +306,7 @@ INSERT INTO categories (category_id, name, parent, created_at, created_by)
  INSERT INTO factors (factor_id, wallet, mode, title, details, amount, data_time, shop)
     VALUES (1,'1','pay_in','خرید گوشی','fast post','1','22/1/2022','1'),
            (2,'3','pay_in','خرید کیف','Breakable','1','20/1/2022','2'),
-           (3,'5','default','lap tap','electrical thing','3','31/1/2021','3'),
+           (3,'5','pay_out','lap tap','electrical thing','3','31/1/2021','3'),
            (4,'5','pay_out','tv','sensitive','5','25/3/2022','3'),
            (5,'4','pay_out','car','new car','1','18/8/2020','2'),
            (6,'1','pay_in','glasses','sensitive','12','20/3/2021','3'),
@@ -315,24 +315,24 @@ INSERT INTO categories (category_id, name, parent, created_at, created_by)
            (9,'1','pay_in','phone','expensive','500','3/6/2015','2'),
            (10,'2','pay_out','drog','in time recive','30','21/5/2020','1');
 
-INSERT INTO discounts (discount_id, amount, mode, from_max, from_min, consumed)            
-    VALUES (1,05,'percently',10000,100000,false),
-           (2,10,'percently',5000,50000,true),
-           (3,25,'percently',4000,45000,false),
-           (4,52,'percently',7500,65000,false),
-           (5,35,'percently',6000,35000,false),
-           (6,65,'percently',8500,85000,true),
-           (7,85,'percently',9000,90000,false),
-           (8,32,'percently',8000,800000,false),
-           (9,54,'percently',15000,150000,false),
-           (10,74,'percently',2000,250000,false);
+INSERT INTO discounts (discounts_id, amount, mode enum, from_max, from_min, consumed)            
+    VALUES ();
+           ();
+           ();
+           ();
+           ();
+           ();
+           ();
+           ();
+           ();
+           ();
 INSERT INTO wallets_discounts (wallet, discount)
-    VALUES (1,1),
-           (2,2),
-           (3,3),
-           (4,4),
-           (5,5);
-
+    VALUES ();
+           ();
+           ();
+           ();
+           ();
+           
 INSERT INTO shops_employees (shop, employee)
     VALUES ('1','2'),
            ('2','3'),
