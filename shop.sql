@@ -318,15 +318,15 @@ INSERT INTO categories (category_id, name, parent, created_at, created_by)
 
 
 INSERT INTO discounts (discount_id, amount, mode, from_max, from_min, consumed)            
-    VALUES (1,05,'percently',10000,100000,false);
-           (2,10,'percently',5000,50000,true);
-           (3,25,'percently',4000,45000,false);
-           (4,52,'percently',7500,65000,false);
-           (5,35,'percently',6000,35000,false);
-           (6,65,'percently',8500,85000,true);
-           (7,85,'percently',9000,90000,false);
-           (8,32,'percently',8000,800000,false);
-           (9,54,'percently',15000,150000,false);
+    VALUES (1,05,'percently',10000,100000,false),
+           (2,10,'percently',5000,50000,true),
+           (3,25,'percently',4000,45000,false),
+           (4,52,'percently',7500,65000,false),
+           (5,35,'percently',6000,35000,false),
+           (6,65,'percently',8500,85000,true),
+           (7,85,'percently',9000,90000,false),
+           (8,32,'percently',8000,800000,false),
+           (9,54,'percently',15000,150000,false),
            (10,74,'percently',2000,250000,false);
 INSERT INTO wallets_discounts (wallet, discount)
     VALUES (1,1),
