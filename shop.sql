@@ -285,6 +285,22 @@ INSERT INTO categories (category_id, name, parent, created_at, created_by)
            (8,'2','pay_out','bag','Leather bag','100','15/8/2017','1'),
            (9,'1','pay_in','phone','expensive','500','3/6/2015','2'),
            (10,'2','pay_out','drog','in time recive','30','21/5/2020','1');
+
+INSERT INTO discounts (discounts_id, amount, mode enum, from_max, from_min, consumed)            
+    VALUES ();
+           ();
+           ();
+           ();
+           ();
+           ();
+           ();
+           ();
+           ();
+           ();
+INSERT INTO wallets_discounts (wallet, discount)
+    VALUES ();
+           ();
+           ();
+           ();
+           ();
            
-
-
