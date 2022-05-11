@@ -257,6 +257,18 @@ INSERT INTO persons_wallets (person, wallet, balance)
            ('+989362326021',3,124543324),
            ('+989362356021',4,1245443634),
            ('+989363356021',5,124534524);
+           
+INSERT INTO products (product_id,name,total_count,category,added_at,added_by,shop)
+    VALUES (1,'TEST 1',10,1,now(),'+989363236021',1),
+           (2,'TEST 2',10,1,now(),'+989363236022',1),
+           (3,'TEST 3',10,1,now(),'+989363236023',1),
+           (4,'TEST 4',10,1,now(),'+989363236024',2),
+           (5,'TEST 5',10,1,now(),'+989363236025',2),
+           (6,'TEST 6',10,1,now(),'+989363236026',2),
+           (7,'TEST 7',10,1,now(),'+989363236027',3),
+           (8,'TEST 8',10,1,now(),'+989363236028',3),
+           (9,'TEST 9',10,1,now(),'+989363236029',3),
+           (10,'TEST 10',10,1,now(),'+989363236030',3);
 
 INSERT INTO jobs (job_id, employee, role, salary, rate)
     VALUES (1,'+989363236021','shopping',5000000,4),
