@@ -210,7 +210,17 @@ ALTER TABLE wallets_discounts ADD CONSTRAINT wallets_discounts_wallets FOREIGN K
 
 -- End of file.
 
-
+INSERT INTO carts (cart_id,wallet,create_at)
+    VALUES (1,10,now()),
+           (2,9,now()),
+           (3,8,now()),
+           (4,7,now()),
+           (5,6,now()),
+           (6,5,now()),
+           (7,4,now()),
+           (8,3,now()),
+           (9,2,now()),
+           (10,1,now());
 
 INSERT INTO shops (shop_id,rate,address,shop_phone)
     VALUES ('1','4','قاسم اباد _ادیب','d36'),
