@@ -1,6 +1,3 @@
--- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2022-05-10 09:13:03.823
-
 -- tables
 -- Table: carts
 CREATE TABLE carts (
@@ -281,7 +278,7 @@ INSERT INTO products (product_id,name,total_count,category,added_at,added_by,sho
            (9,'TEST 9',10,1,now(),'+989363236029',3),
            (10,'TEST 10',10,1,now(),'+989363236030',3);
 
-INSERT INTO product_carts (product,cart)
+INSERT INTO products_carts (product,cart)
     VALUES (5,1),
            (7,2),
            (8,3),
