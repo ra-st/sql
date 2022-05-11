@@ -1,6 +1,3 @@
--- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2022-05-10 09:13:03.823
-
 -- tables
 -- Table: carts
 CREATE TABLE carts (
