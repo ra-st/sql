@@ -257,6 +257,25 @@ INSERT INTO persons_wallets (person, wallet, balance)
            ('+989362326021',3,124543324),
            ('+989362356021',4,1245443634),
            ('+989363356021',5,124534524);
+           
+INSERT INTO products (product_id,name,total_count,category,added_at,added_by,shop)
+    VALUES (1,'TEST 1',10,1,now(),'+989363236021',1),
+           (2,'TEST 2',10,1,now(),'+989363236022',1),
+           (3,'TEST 3',10,1,now(),'+989363236023',1),
+           (4,'TEST 4',10,1,now(),'+989363236024',2),
+           (5,'TEST 5',10,1,now(),'+989363236025',2),
+           (6,'TEST 6',10,1,now(),'+989363236026',2),
+           (7,'TEST 7',10,1,now(),'+989363236027',3),
+           (8,'TEST 8',10,1,now(),'+989363236028',3),
+           (9,'TEST 9',10,1,now(),'+989363236029',3),
+           (10,'TEST 10',10,1,now(),'+989363236030',3);
+
+INSERT INTO product_carts (product,cart)
+    VALUES (5,1),
+           (7,2),
+           (8,3),
+           (9,4),
+           (3,5);
 
 INSERT INTO jobs (job_id, employee, role, salary, rate)
     VALUES (1,'+989363236021','shopping',5000000,4),
@@ -277,7 +296,7 @@ INSERT INTO categories (category_id, name, parent, created_at, created_by)
  INSERT INTO factors (factor_id, wallet, mode, title, details, amount, data_time, shop)
     VALUES (1,'1','pay_in','خرید گوشی','fast post','1','22/1/2022','1'),
            (2,'3','pay_in','خرید کیف','Breakable','1','20/1/2022','2'),
-           (3,'5','pay_out','lap tap','electrical thing','3','31/1/2021','3'),
+           (3,'5','default','lap tap','electrical thing','3','31/1/2021','3'),
            (4,'5','pay_out','tv','sensitive','5','25/3/2022','3'),
            (5,'4','pay_out','car','new car','1','18/8/2020','2'),
            (6,'1','pay_in','glasses','sensitive','12','20/3/2021','3'),
