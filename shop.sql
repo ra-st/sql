@@ -224,9 +224,9 @@ INSERT INTO carts (cart_id,wallet,create_at)
            (10,1,now());
 
 INSERT INTO shops (shop_id,rate,address,shop_phone)
-    VALUES ('1','4','قاسم اباد _ادیب','d36'),
-           ('2','5','AHMAD ABAD','03313'),
-           ('3','3','VAKIL ABAD','5454');
+    VALUES (1,4,'Qom','d36'),
+           (2,5,'AHMAD ABAD','03313'),
+           (3,3,'VAKIL ABAD','5454');
 
 INSERT INTO persons (phone, first_name, last_name, address, city, email, birth_date, join_at) 
     VALUES ('+989363716021','Ali','Ahmady','Asia/Iran/Tehran','Tehran','Ali@gmail.com','2022-01-24','2020-10-20 20:59:59'),
@@ -305,16 +305,16 @@ INSERT INTO categories (category_id, name, parent, created_at, created_by)
            (7,'food',null,now(),'+989363236021');
            
  INSERT INTO factors (factor_id, wallet, mode, title, details, amount, data_time, shop)
-    VALUES (1,'1','pay_in','خرید گوشی','fast post','1','22/1/2022','1'),
-           (2,'3','pay_in','خرید کیف','Breakable','1','20/1/2022','2'),
-           (3,'5','pay_out','lap tap','electrical thing','3','31/1/2021','3'),
-           (4,'5','pay_out','tv','sensitive','5','25/3/2022','3'),
-           (5,'4','pay_out','car','new car','1','18/8/2020','2'),
-           (6,'1','pay_in','glasses','sensitive','12','20/3/2021','3'),
-           (7,'3','pay_in','shoe','black shoe','53','15/6/2019','2'),
-           (8,'2','pay_out','bag','Leather bag','100','15/8/2017','1'),
-           (9,'1','pay_in','phone','expensive','500','3/6/2015','2'),
-           (10,'2','pay_out','drog','in time recive','30','21/5/2020','1');
+    VALUES (1,1,'pay_in','خرید گوشی','fast post','1','22/1/2022','1'),
+           (2,3,'pay_in','خرید کیف','Breakable','1','20/1/2022','2'),
+           (3,5,'pay_out','lap tap','electrical thing','3','31/1/2021','3'),
+           (4,5,'pay_out','tv','sensitive','5','25/3/2022','3'),
+           (5,4,'pay_out','car','new car','1','18/8/2020','2'),
+           (6,1,'pay_in','glasses','sensitive','12','20/3/2021','3'),
+           (7,3,'pay_in','shoe','black shoe','53','15/6/2019','2'),
+           (8,2,'pay_out','bag','Leather bag','100','15/8/2017','1'),
+           (9,1,'pay_in','phone','expensive','500','3/6/2015','2'),
+           (10,2,'pay_out','drog','in time recive','30','21/5/2020','1');
 
 
 INSERT INTO discounts (discount_id, amount, mode, from_max, from_min, consumed)            
@@ -337,9 +337,9 @@ INSERT INTO wallets_discounts (wallet, discount)
 
            
 INSERT INTO shops_employees (shop, employee)
-    VALUES ('1','2'),
-           ('2','3'),
-           ('1','1'),
-           ('2','2'),
-           ('3','1');
+    VALUES (1,2),
+           (2,3),
+           (1,1),
+           (2,2),
+           (3,1);
            
