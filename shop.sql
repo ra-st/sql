@@ -219,17 +219,50 @@ ALTER TABLE wallets_discounts ADD CONSTRAINT wallets_discounts_wallets FOREIGN K
 
 -- End of file.
 
-INSERT INTO carts (cart_id,wallet,create_at)
-    VALUES (1,10,now()),
-           (2,9,now()),
-           (3,8,now()),
-           (4,7,now()),
-           (5,6,now()),
-           (6,5,now()),
-           (7,4,now()),
-           (8,3,now()),
-           (9,2,now()),
-           (10,1,now());
+INSERT INTO persons (phone, first_name, last_name, address, city, email, birth_date, join_at) 
+    VALUES ('+989363716021','Ali','Ahmady','Asia/Iran/Tehran','Tehran','Ali@gmail.com','2022-01-24','2020-10-20 20:59:59'),
+           ('+989363236021','Abbas','Abbasy','Asia/Iran/Mashahd','Mashhad','Abbas@gmail.com','2003-02-24','2020-10-21 20:59:59'),
+           ('+989393936021','Shaba','Shabaii','Asia/Iran/Mashahd','Mashhad','Shaba@gmail.com','2003-02-24','2020-10-21 20:59:59'),
+           ('+989368536021','Sola','Soly','Asia/Iran/Mashahd','Mashhad','Sola@gmail.com','2003-02-25','2020-10-21 20:59:59'),
+           ('+986845536021','Sina','Sinoii','Asia/Iran/Mashahd','Mashhad','Sina@gmail.com','2003-02-26','2020-10-21 20:59:59'),
+           ('+989984652021','Sagha','Asaby','Asia/Iran/Mashahd','Mashhad','Sagha@gmail.com','2000-03-28','2020-10-21 20:59:59'),
+           ('+989398785021','Sana','Yasi','Asia/Iran/Mashahd','Mashhad','Sana@gmail.com','2003-02-29','2020-10-21 20:59:59'),
+           ('+989986541021','hgfs','oiuy','Asia/Iran/Isfahan','Isfahan','jhgfjh@gmail.com','2003-10-00','2020-10-22 20:59:59'),
+           ('+989389854621','hs','kjhgkjh','Asia/Iran/Isfahan','Isfahan','jhgfgh@gmail.com','2003-10-01','2020-10-22 20:59:59'),
+           ('+986845886021','hgdf','oiuh','Asia/Iran/Isfahan','Isfahan','kufb@gmail.com','2003-10-02','2020-10-22 20:59:59'),
+           ('+989984654021','utrdt','oiuhui','Asia/Iran/Isfahan','Isfahan','kuygb@gmail.com','2003-10-14','2020-10-22 20:59:59'),
+           ('+989464655621','hgfd','iuho','Asia/Iran/Isfahan','Isfahan','jhgfb@gmail.com','2003-10-24','2020-10-22 20:59:59'),
+           ('+989368465481','utyd','uyd','Asia/Iran/Isfahan','Isfahan','bcgfmk@gmail.com','2003-10-04','2020-10-22 20:59:59'),
+           ('+989362356021','Abolfazl','Aboly','Asia/Iran/Zahedan','Zahedan','Abolfazl@gmail.com','2003-12-04','2020-10-23 20:59:59'),
+           ('+989363356021','Sajjad','Sajjadi','Asia/Iran/Birjand','Birjand','Sajjad@gmail.com','2002-02-25','2020-10-22 22:59:59'),
+           ('+989363235251','Kumar','Khalil','Asia/India/Mumbaii','Mumbaii','Kumar@gmail.com','2002-03-21','2020-10-22 20:59:59'),
+           ('+989363713252','Saber','Sabery','Asia/Iran/Rasht','Rasht','Saber@gmail.com','2002-04-01','2020-10-23 20:59:59'),
+           ('+989363235235','Saba','Sabaii','Asia/Iran/Sari','Sari','Saba@gmail.com','2000-12-24','2020-10-22 20:59:59'),
+           ('+989363745346','Sara','Saboory','Asia/Iran/Urumia','Urumia','Sara@gmail.com','2004-10-24','2020-10-20 21:09:59');
+
+INSERT INTO wallets (wallet_id,balance)
+    VALUES (1,12424),
+           (2,124544),
+           (3,124543324),
+           (4,1245443634),
+           (5,124534524);
+
+INSERT INTO persons_wallets (person, wallet, balance)
+    VALUES ('+989363712321',1,10424),
+           ('+989363235251',1,2000),
+           ('+989363713252',2,124544),
+           ('+989362326021',3,124543324),
+           ('+989362356021',4,1245443634),
+           ('+989363356021',5,124534524);
+
+INSERT INTO categories (category_id, name, parent, created_at, created_by)
+    VALUES (1,'sport',null,now(),'+989363236021'),
+           (2,'digital',null,now(),'+989363236021'),
+           (3,'wearing',null,now(),'+989363236021'),
+           (4,'clothe',3,now(),'+989363236021'),
+           (5,'short',3,now(),'+989363236021'),
+           (6,'trouser',3,now(),'+989363236021'),
+           (7,'food',null,now(),'+989363236021');
 
 INSERT INTO shops (shop_id, rate, address, city, shop_phone)
     VALUES (1,'4','Ghasem abad','Mashhad','05138242450'),
@@ -258,33 +291,22 @@ INSERT INTO shops (shop_id, rate, address, city, shop_phone)
            (24,'3',' 098uo y8hih','Semnan','0503432343'),
            (25,'3','VAKIL ABAD','Sarv','0452423114');
 
-INSERT INTO persons (phone, first_name, last_name, address, city, email, birth_date, join_at) 
-    VALUES ('+989363716021','Ali','Ahmady','Asia/Iran/Tehran','Tehran','Ali@gmail.com','2022-01-24','2020-10-20 20:59:59'),
-           ('+989363236021','Abbas','Abbasy','Asia/Iran/Mashahd','Mashhad','Abbas@gmail.com','2003-02-24','2020-10-21 20:59:59'),
-           ('+989393936021','Shaba','Shabaii','Asia/Iran/Mashahd','Mashhad','Shaba@gmail.com','2003-02-24','2020-10-21 20:59:59'),
-           ('+989368536021','Sola','Soly','Asia/Iran/Mashahd','Mashhad','Sola@gmail.com','2003-02-25','2020-10-21 20:59:59'),
-           ('+986845536021','Sina','Sinoii','Asia/Iran/Mashahd','Mashhad','Sina@gmail.com','2003-02-26','2020-10-21 20:59:59'),
-           ('+989984652021','Sagha','Asaby','Asia/Iran/Mashahd','Mashhad','Sagha@gmail.com','2000-03-28','2020-10-21 20:59:59'),
-           ('+989398785021','Sana','Yasi','Asia/Iran/Mashahd','Mashhad','Sana@gmail.com','2003-02-29','2020-10-21 20:59:59'),
-           ('+989986541021','hgfs','oiuy','Asia/Iran/Isfahan','Isfahan','jhgfjh@gmail.com','2003-10-00','2020-10-22 20:59:59'),
-           ('+989389854621','hs','kjhgkjh','Asia/Iran/Isfahan','Isfahan','jhgfgh@gmail.com','2003-10-01','2020-10-22 20:59:59'),
-           ('+986845886021','hgdf','oiuh','Asia/Iran/Isfahan','Isfahan','kufb@gmail.com','2003-10-02','2020-10-22 20:59:59'),
-           ('+989984654021','utrdt','oiuhui','Asia/Iran/Isfahan','Isfahan','kuygb@gmail.com','2003-10-14','2020-10-22 20:59:59'),
-           ('+989464655621','hgfd','iuho','Asia/Iran/Isfahan','Isfahan','jhgfb@gmail.com','2003-10-24','2020-10-22 20:59:59'),
-           ('+989368465481','utyd','uyd','Asia/Iran/Isfahan','Isfahan','bcgfmk@gmail.com','2003-10-04','2020-10-22 20:59:59'),
-           ('+989362356021','Abolfazl','Aboly','Asia/Iran/Zahedan','Zahedan','Abolfazl@gmail.com','2003-12-04','2020-10-23 20:59:59'),
-           ('+989363356021','Sajjad','Sajjadi','Asia/Iran/Birjand','Birjand','Sajjad@gmail.com','2002-02-25','2020-10-22 22:59:59'),
-           ('+989363235251','Kumar','Khalil','Asia/India/Mumbaii','Mumbaii','Kumar@gmail.com','2002-03-21','2020-10-22 20:59:59'),
-           ('+989363713252','Saber','Sabery','Asia/Iran/Rasht','Rasht','Saber@gmail.com','2002-04-01','2020-10-23 20:59:59'),
-           ('+989363235235','Saba','Sabaii','Asia/Iran/Sari','Sari','Saba@gmail.com','2000-12-24','2020-10-22 20:59:59'),
-           ('+989363745346','Sara','Saboory','Asia/Iran/Urumia','Urumia','Sara@gmail.com','2004-10-24','2020-10-20 21:09:59');
-
-INSERT INTO employees (employee_phone, salary)
-    VALUES ('+989363236021','10000000'),
-           ('+989362326021','5000000'),
-           ('+989362356021','4500000'),
-           ('+989363356021','25000000'),
-           ('+989363712321','335000');
+INSERT INTO factors (factor_id, wallet, mode, title, details, amount, date_time, shop)
+    VALUES (1,'1','pay_in','phone','fast post','1','2022-10-20','1'),
+           (2,'3','pay_in','bag','Breakable','10','2020-8-6','2'),
+           (3,'5','pay_out','lap tap','electrical thing','3','2019-5-8','3'),
+           (4,'5','pay_out','tv','sensitive','25','2018-8-7','3'),
+           (5,'4','pay_out','car','new car','15','2015-5-31','2'),
+           (6,'1','pay_in','glasses','sensitive','142','2012-11-15','3'),
+           (7,'1','pay_in','game go','iue','82','2012-11-15','3'),
+           (8,'1','pay_in','banana','spiuhe','142','2012-11-25','3'),
+           (9,'1','pay_in','cd','soiuhiouhve','5','2012-11-05','3'),
+           (10,'1','pay_in','sart','seniouhiuohive','82','2012-11-05','3'),
+           (11,'1','pay_in','sal','soiuhoiuhive','9','2012-11-05','3'),
+           (12,'3','pay_in','shoes','blaoiuhiuoe','5','2018-10-06','2'),
+           (13,'2','pay_out','wallet','Loiuhiouhbag','21','2016-4-08','1'),
+           (14,'1','pay_in','ball','eoiuhiuhve','54','2013-10-15','2'),
+           (15,'2','pay_out','song','in time recive','87','2011-12-15','1');
 
 INSERT INTO customers (customer_phone)
     VALUES ('+989363712321'),
@@ -293,21 +315,27 @@ INSERT INTO customers (customer_phone)
            ('+989363235235'),
            ('+989363745346');
 
-INSERT INTO wallets (wallet_id,balance)
-    VALUES (1,12424),
-           (2,124544),
-           (3,124543324),
-           (4,1245443634),
-           (5,124534524);
-    
-INSERT INTO persons_wallets (person, wallet, balance)
-    VALUES ('+989363712321',1,10424),
-           ('+989363235251',1,2000),
-           ('+989363713252',2,124544),
-           ('+989362326021',3,124543324),
-           ('+989362356021',4,1245443634),
-           ('+989363356021',5,124534524);
-           
+INSERT INTO employees (employee_phone, salary)
+    VALUES ('+989363236021','10000000'),
+           ('+989362326021','5000000'),
+           ('+989362356021','4500000'),
+           ('+989363356021','25000000'),
+           ('+989363712321','335000');
+
+INSERT INTO jobs (job_id, employee, role, salary, rate)
+    VALUES (1,'+989363236021','shopping',5000000,4),
+           (2,'+989362326021','statistics',10000000,4),
+           (3,'+989362356021','advertising',5000000,5),
+           (4,'+989363356021','ios developer',20000000,4),
+           (5,'+989363712321','android developer',3000000,5);
+
+INSERT INTO shops_employees (shop, employee)
+    VALUES ('1','2'),
+           ('2','3'),
+           ('1','1'),
+           ('2','2'),
+           ('3','1');
+
 INSERT INTO products (product_id,name,price,total_count,category,added_at,added_by,shop)
     VALUES (1,'TEST 1',100000,10,1,now(),'+989363236021',1),
            (2,'TEST 2',100000,10,1,now(),'+989363236022',1),
@@ -335,6 +363,18 @@ INSERT INTO products (product_id,name,price,total_count,category,added_at,added_
            (24,'TEST 9',9986798,10,1,now(),'+989387646529',3),
            (25,'TEST 10',548,10,1,now(),'+989378765030',3);
 
+INSERT INTO carts (cart_id,wallet,create_at)
+    VALUES (1,10,now()),
+           (2,9,now()),
+           (3,8,now()),
+           (4,7,now()),
+           (5,6,now()),
+           (6,5,now()),
+           (7,4,now()),
+           (8,3,now()),
+           (9,2,now()),
+           (10,1,now());
+
 INSERT INTO products_carts (product,cart)
     VALUES (5,1),
            (7,2),
@@ -342,40 +382,7 @@ INSERT INTO products_carts (product,cart)
            (9,4),
            (3,5);
 
-INSERT INTO jobs (job_id, employee, role, salary, rate)
-    VALUES (1,'+989363236021','shopping',5000000,4),
-           (2,'+989362326021','statistics',10000000,4),
-           (3,'+989362356021','advertising',5000000,5),
-           (4,'+989363356021','ios developer',20000000,4),
-           (5,'+989363712321','android developer',3000000,5);
-
-INSERT INTO categories (category_id, name, parent, created_at, created_by)
-    VALUES (1,'sport',null,now(),'+989363236021'),
-           (2,'digital',null,now(),'+989363236021'),
-           (3,'wearing',null,now(),'+989363236021'),
-           (4,'clothe',3,now(),'+989363236021'),
-           (5,'short',3,now(),'+989363236021'),
-           (6,'trouser',3,now(),'+989363236021'),
-           (7,'food',null,now(),'+989363236021');
-           
- INSERT INTO factors (factor_id, wallet, mode, title, details, amount, date_time, shop)
-    VALUES (1,'1','pay_in','phone','fast post','1','2022-10-20','1'),
-           (2,'3','pay_in','bag','Breakable','10','2020-8-6','2'),
-           (3,'5','pay_out','lap tap','electrical thing','3','2019-5-8','3'),
-           (4,'5','pay_out','tv','sensitive','25','2018-8-7','3'),
-           (5,'4','pay_out','car','new car','15','2015-5-31','2'),
-           (6,'1','pay_in','glasses','sensitive','142','2012-11-15','3'),
-           (7,'1','pay_in','game go','iue','82','2012-11-15','3'),
-           (8,'1','pay_in','banana','spiuhe','142','2012-11-25','3'),
-           (9,'1','pay_in','cd','soiuhiouhve','5','2012-11-05','3'),
-           (10,'1','pay_in','sart','seniouhiuohive','82','2012-11-05','3'),
-           (11,'1','pay_in','sal','soiuhoiuhive','9','2012-11-05','3'),
-           (12,'3','pay_in','shoes','blaoiuhiuoe','5','2018-10-06','2'),
-           (13,'2','pay_out','wallet','Loiuhiouhbag','21','2016-4-08','1'),
-           (14,'1','pay_in','ball','eoiuhiuhve','54','2013-10-15','2'),
-           (15,'2','pay_out','song','in time recive','87','2011-12-15','1');
-
-
+ 
 INSERT INTO discounts (discount_id, amount, mode, from_max, from_min, consumed)            
     VALUES (1,05,'percently',10000,100000,false),
            (2,10,'percently',5000,50000,true),
@@ -387,19 +394,12 @@ INSERT INTO discounts (discount_id, amount, mode, from_max, from_min, consumed)
            (8,32,'percently',8000,800000,false),
            (9,54,'percently',15000,150000,false),
            (10,74,'percently',2000,250000,false);
-           
+
 INSERT INTO wallets_discounts (wallet, discount)
     VALUES (1,1),
            (2,2),
            (3,3),
            (4,4),
            (5,5);
-
            
-INSERT INTO shops_employees (shop, employee)
-    VALUES ('1','2'),
-           ('2','3'),
-           ('1','1'),
-           ('2','2'),
-           ('3','1');
-           
+-- sorteds above
