@@ -229,7 +229,7 @@ INSERT INTO shops (shop_id,rate,address,shop_phone)
 INSERT INTO persons (phone, first_name, last_name, address, city, email, birth_date, join_at) 
     VALUES ('+989363716021','Ali','Ahmady','Asia/Iran/Tehran','Tehran','Ali@gmail.com','2022-01-24','2020-10-20 20:59:59'),
            ('+989363236021','Abbas','Abbasy','Asia/Iran/Mashahd','Mashhad','Abbas@gmail.com','2003-02-24','2020-10-21 20:59:59'),
-           ('+989363236021','Shaba','Shabaii','Asia/Iran/Mashahd','Mashhad','Shaba@gmail.com','2003-02-24','2020-10-21 20:59:59'),
+           ('+989393936021','Shaba','Shabaii','Asia/Iran/Mashahd','Mashhad','Shaba@gmail.com','2003-02-24','2020-10-21 20:59:59'),
            ('+989368536021','Sola','Soly','Asia/Iran/Mashahd','Mashhad','Sola@gmail.com','2003-02-25','2020-10-21 20:59:59'),
            ('+986845536021','Sina','Sinoii','Asia/Iran/Mashahd','Mashhad','Sina@gmail.com','2003-02-26','2020-10-21 20:59:59'),
            ('+989984652021','Sagha','Asaby','Asia/Iran/Mashahd','Mashhad','Sagha@gmail.com','2000-03-28','2020-10-21 20:59:59'),
