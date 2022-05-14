@@ -113,6 +113,7 @@ CREATE TABLE shops (
     shop_id int NOT NULL,
     rate enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
     address text NOT NULL,
+    city varchar(50) NOT NULL,
     shop_phone varchar(50) NOT NULL,
     CONSTRAINT `shops_pk` PRIMARY KEY (shop_id)
 );
@@ -187,6 +188,15 @@ ALTER TABLE products_carts ADD CONSTRAINT products_carts_products FOREIGN KEY pr
 ALTER TABLE products ADD CONSTRAINT products_categories FOREIGN KEY products_categories (category)
     REFERENCES categories (category_id);
 
+-- Reference: categories_employees (table: categories)
+ALTER TABLE categories ADD CONSTRAINT categories_employees FOREIGN KEY categories (created_by)
+    REFERENCES employees (employee_phone);
+
+-- Reference: products_employees (table: products)
+ALTER TABLE products ADD CONSTRAINT products_employees FOREIGN KEY products (added_by)
+    REFERENCES employees (employee_phone);
+
+
 -- Reference: products_shops (table: products)
 ALTER TABLE products ADD CONSTRAINT products_shops FOREIGN KEY products_shops (shop)
     REFERENCES shops (shop_id);
@@ -221,10 +231,32 @@ INSERT INTO carts (cart_id,wallet,create_at)
            (9,2,now()),
            (10,1,now());
 
-INSERT INTO shops (shop_id,rate,address,shop_phone)
-    VALUES ('1','4','ghasem abad','d36'),
-           ('2','5','AHMAD ABAD','03313'),
-           ('3','3','VAKIL ABAD','5454');
+INSERT INTO shops (shop_id, rate, address, city, shop_phone)
+    VALUES (1,'4','Ghasem abad','Mashhad','05138242450'),
+           (2,'5','Hashemieh','Mashhad','0215456432'),
+           (3,'0','Sajjad blv','Mashhad','0503432343'),
+           (4,'1','Rzieh','Mashhad','0503432343'),
+           (5,'5','Karagaran Shomali','Teharn','0213432343'),
+           (6,'0','Urumia','Tehran','0213432343'),
+           (7,'2','Hojjati','Tehran','0213432343'),
+           (8,'2','Namaz street','Tehran','0213432343'),
+           (9,'5','Laleha','Tehran','0213432343'),
+           (10,'3','Sima','Quchan','0503432343'),
+           (11,'1','soijeooij','Quchan','0503432343'),
+           (12,'2','ihiiohu','Sabzevar','0503432343'),
+           (13,'0','oiuh','Sabzevar','0503432343'),
+           (14,'3','oiuh','Khozestan','0503432343'),
+           (15,'1','oyoy','Hamedan','0503432343'),
+           (16,'5','Aoih','Birjand','0503432343'),
+           (17,'3','Aoiuh','Bojnurd','0503432343'),
+           (18,'4','oig8iiu','Kerman','0503432343'),
+           (19,'3','98u 8u oj','Kordestan','0503432343'),
+           (20,'5','A8uo 9u ','Torbat Jam','0503432343'),
+           (21,'5','98u oi ioD','Torbat Heidarieh','0503432343'),
+           (22,'3',' 98o iD','Ahvaz','0503432343'),
+           (23,'4','A 98u 9 ','Sari','0503432343'),
+           (24,'3',' 098uo y8hih','Semnan','0503432343'),
+           (25,'3','VAKIL ABAD','Sarv','0452423114');
 
 INSERT INTO persons (phone, first_name, last_name, address, city, email, birth_date, join_at) 
     VALUES ('+989363716021','Ali','Ahmady','Asia/Iran/Tehran','Tehran','Ali@gmail.com','2022-01-24','2020-10-20 20:59:59'),
@@ -355,6 +387,7 @@ INSERT INTO discounts (discount_id, amount, mode, from_max, from_min, consumed)
            (8,32,'percently',8000,800000,false),
            (9,54,'percently',15000,150000,false),
            (10,74,'percently',2000,250000,false);
+           
 INSERT INTO wallets_discounts (wallet, discount)
     VALUES (1,1),
            (2,2),
