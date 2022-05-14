@@ -333,15 +333,15 @@ INSERT INTO categories (category_id, name, parent, created_at, created_by)
            (4,'5','pay_out','tv','sensitive','25','2018-8-7','3'),
            (5,'4','pay_out','car','new car','15','2015-5-31','2'),
            (6,'1','pay_in','glasses','sensitive','142','2012-11-15','3'),
-           (6,'1','pay_in','game go','iue','82','2012-11-15','3'),
-           (6,'1','pay_in','banana','spiuhe','142','2012-11-25','3'),
-           (6,'1','pay_in','cd','soiuhiouhve','5','2012-11-05','3'),
-           (6,'1','pay_in','sart','seniouhiuohive','82','2012-11-05','3'),
-           (6,'1','pay_in','sal','soiuhoiuhive','9','2012-11-05','3'),
-           (7,'3','pay_in','shoes','blaoiuhiuoe','5','2018-10-06','2'),
-           (8,'2','pay_out','wallet','Loiuhiouhbag','21','2016-4-08','1'),
-           (9,'1','pay_in','ball','eoiuhiuhve','54','2013-10-15','2'),
-           (10,'2','pay_out','song','in time recive','87','2011-12-15','1');
+           (7,'1','pay_in','game go','iue','82','2012-11-15','3'),
+           (8,'1','pay_in','banana','spiuhe','142','2012-11-25','3'),
+           (9,'1','pay_in','cd','soiuhiouhve','5','2012-11-05','3'),
+           (10,'1','pay_in','sart','seniouhiuohive','82','2012-11-05','3'),
+           (11,'1','pay_in','sal','soiuhoiuhive','9','2012-11-05','3'),
+           (12,'3','pay_in','shoes','blaoiuhiuoe','5','2018-10-06','2'),
+           (13,'2','pay_out','wallet','Loiuhiouhbag','21','2016-4-08','1'),
+           (14,'1','pay_in','ball','eoiuhiuhve','54','2013-10-15','2'),
+           (15,'2','pay_out','song','in time recive','87','2011-12-15','1');
 
 
 INSERT INTO discounts (discount_id, amount, mode, from_max, from_min, consumed)            
