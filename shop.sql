@@ -228,10 +228,19 @@ INSERT INTO shops (shop_id,rate,address,shop_phone)
 INSERT INTO persons (phone, first_name, last_name, address, city, email, birth_date, join_at) 
     VALUES ('+989363716021','Ali','Ahmady','Asia/Iran/Tehran','Tehran','Ali@gmail.com','2022-01-24','2020-10-20 20:59:59'),
            ('+989363236021','Abbas','Abbasy','Asia/Iran/Mashahd','Mashhad','Abbas@gmail.com','2003-02-24','2020-10-21 20:59:59'),
-           ('+989362326021','Shahab','Shahaby','Asia/Iran/Isfahan','Isfahan','Shahab@gmail.com','2003-10-04','2020-10-22 20:59:59'),
+           ('+989363236021','Shaba','Shabaii','Asia/Iran/Mashahd','Mashhad','Shaba@gmail.com','2003-02-24','2020-10-21 20:59:59'),
+           ('+989363236021','Sola','Soly','Asia/Iran/Mashahd','Mashhad','Sola@gmail.com','2003-02-25','2020-10-21 20:59:59'),
+           ('+989363236021','Sina','Sinoii','Asia/Iran/Mashahd','Mashhad','Sina@gmail.com','2003-02-26','2020-10-21 20:59:59'),
+           ('+989363236021','Sagha','Asaby','Asia/Iran/Mashahd','Mashhad','Sagha@gmail.com','2000-03-28','2020-10-21 20:59:59'),
+           ('+989363236021','Sana','Yasi','Asia/Iran/Mashahd','Mashhad','Sana@gmail.com','2003-02-29','2020-10-21 20:59:59'),
+           ('+989362326021','hgfs','oiuy','Asia/Iran/Isfahan','Isfahan','jhgfjh@gmail.com','2003-10-00','2020-10-22 20:59:59'),
+           ('+989362326021','hs','kjhgkjh','Asia/Iran/Isfahan','Isfahan','jhgfgh@gmail.com','2003-10-01','2020-10-22 20:59:59'),
+           ('+989362326021','hgdf','oiuh','Asia/Iran/Isfahan','Isfahan','kufb@gmail.com','2003-10-02','2020-10-22 20:59:59'),
+           ('+989362326021','utrdt','oiuhui','Asia/Iran/Isfahan','Isfahan','kuygb@gmail.com','2003-10-14','2020-10-22 20:59:59'),
+           ('+989362326021','hgfd','iuho','Asia/Iran/Isfahan','Isfahan','jhgfb@gmail.com','2003-10-24','2020-10-22 20:59:59'),
+           ('+989362326021','utyd','uyd','Asia/Iran/Isfahan','Isfahan','bcgfmk@gmail.com','2003-10-04','2020-10-22 20:59:59'),
            ('+989362356021','Abolfazl','Aboly','Asia/Iran/Zahedan','Zahedan','Abolfazl@gmail.com','2003-12-04','2020-10-23 20:59:59'),
            ('+989363356021','Sajjad','Sajjadi','Asia/Iran/Birjand','Birjand','Sajjad@gmail.com','2002-02-25','2020-10-22 22:59:59'),
-           ('+989363712321','Wing','Cheung chow','Asia/China/Hongkong','Hongkong','Wing@gmail.com','2001-04-24','2020-10-21 20:59:59'),
            ('+989363235251','Kumar','Khalil','Asia/India/Mumbaii','Mumbaii','Kumar@gmail.com','2002-03-21','2020-10-22 20:59:59'),
            ('+989363713252','Saber','Sabery','Asia/Iran/Rasht','Rasht','Saber@gmail.com','2002-04-01','2020-10-23 20:59:59'),
            ('+989363235235','Saba','Sabaii','Asia/Iran/Sari','Sari','Saba@gmail.com','2000-12-24','2020-10-22 20:59:59'),
@@ -276,7 +285,22 @@ INSERT INTO products (product_id,name,total_count,category,added_at,added_by,sho
            (7,'TEST 7',10,1,now(),'+989363236027',3),
            (8,'TEST 8',10,1,now(),'+989363236028',3),
            (9,'TEST 9',10,1,now(),'+989363236029',3),
-           (10,'TEST 10',10,1,now(),'+989363236030',3);
+           (10,'TEST 9',10,1,now(),'+989363236029',3),
+           (11,'TEST 9',10,1,now(),'+989363236029',3),
+           (12,'TEST 9',10,1,now(),'+989363236029',3),
+           (13,'TEST 9',10,1,now(),'+989365766029',3),
+           (14,'TEST 9',10,1,now(),'+989366576029',3),
+           (15,'TEST 9',10,1,now(),'+989356776729',3),
+           (16,'TEST 9',10,1,now(),'+989363567029',3),
+           (17,'TEST 9',10,1,now(),'+989385556029',3),
+           (18,'TEST 9',10,1,now(),'+989384566029',3),
+           (19,'TEST 9',10,1,now(),'+989564688029',3),
+           (20,'TEST 9',10,1,now(),'+989865465489',3),
+           (21,'TEST 9',10,1,now(),'+989354686549',3),
+           (22,'TEST 9',10,1,now(),'+989397645629',3),
+           (23,'TEST 9',10,1,now(),'+989387656469',3),
+           (24,'TEST 9',10,1,now(),'+989387646529',3),
+           (25,'TEST 10',10,1,now(),'+989378765030',3);
 
 INSERT INTO products_carts (product,cart)
     VALUES (5,1),
@@ -303,15 +327,20 @@ INSERT INTO categories (category_id, name, parent, created_at, created_by)
            
  INSERT INTO factors (factor_id, wallet, mode, title, details, amount, date_time, shop)
     VALUES (1,'1','pay_in','phone','fast post','1','2022-10-20','1'),
-           (2,'3','pay_in','bag','Breakable','1','2020-8-6','2'),
+           (2,'3','pay_in','bag','Breakable','10','2020-8-6','2'),
            (3,'5','pay_out','lap tap','electrical thing','3','2019-5-8','3'),
-           (4,'5','pay_out','tv','sensitive','5','2018-8-7','3'),
-           (5,'4','pay_out','car','new car','1','2015-5-31','2'),
-           (6,'1','pay_in','glasses','sensitive','12','2012-11-15','3'),
-           (7,'3','pay_in','shoe','black shoe','53','2018-10-6','2'),
-           (8,'2','pay_out','bag','Leather bag','100','2016-4-18','1'),
-           (9,'1','pay_in','phone','expensive','500','2013-10-5','2'),
-           (10,'2','pay_out','drog','in time recive','30','2011-12-14','1');
+           (4,'5','pay_out','tv','sensitive','25','2018-8-7','3'),
+           (5,'4','pay_out','car','new car','15','2015-5-31','2'),
+           (6,'1','pay_in','glasses','sensitive','142','2012-11-15','3'),
+           (6,'1','pay_in','game go','iue','82','2012-11-15','3'),
+           (6,'1','pay_in','banana','spiuhe','142','2012-11-25','3'),
+           (6,'1','pay_in','cd','soiuhiouhve','5','2012-11-05','3'),
+           (6,'1','pay_in','sart','seniouhiuohive','82','2012-11-05','3'),
+           (6,'1','pay_in','sal','soiuhoiuhive','9','2012-11-05','3'),
+           (7,'3','pay_in','shoes','blaoiuhiuoe','5','2018-10-06','2'),
+           (8,'2','pay_out','wallet','Loiuhiouhbag','21','2016-4-08','1'),
+           (9,'1','pay_in','ball','eoiuhiuhve','54','2013-10-15','2'),
+           (10,'2','pay_out','song','in time recive','87','2011-12-15','1');
 
 
 INSERT INTO discounts (discount_id, amount, mode, from_max, from_min, consumed)            
